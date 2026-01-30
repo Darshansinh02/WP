@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Album</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        h1{    color: #333;}
+        .album-container {
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            justify-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;}
+</style>
+</head>
+<body>
+    <h1>My Album</h1>
+    <p>Click on any image to view it in full size.</p>
+    <div class="album-container">
+        <div class="album-item">
+            <a href="1.png"><img src="1.png" alt="Image 1"></a>
+        </div>
+        <div class="album-item">
+            <a href="2.png"><img src="2.png" alt="Image 2"></a>
+        </div>
+        <div class="album-item">
+            <a href="3.png"><img src="3.png" alt="Image 3"></a>
+        </div>
+        <div class="album-item">
+            <a href="4.png"><img src="4.png" alt="Image 4"></a>
+        </div>
+    </div>
+</body>
+</html>
