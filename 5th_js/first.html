@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sorts elements of Array</title>
+    <style>
+        body { 
+            font-family: sans-serif; 
+            background: #f0f2f5; 
+            display: flex; 
+            justify-content: center; 
+            margin-top: 50px; 
+        }
+        .container { 
+            background: white; 
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+            text-align: center; 
+        }
+        input, button { 
+            padding: 8px; 
+            margin: 5px; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+        }
+        button { 
+            background: #007bff; 
+            color: white; 
+            border: none; 
+            cursor: pointer; 
+        }
+        #result { 
+            margin-top: 15px; 
+            font-weight: bold; 
+            color: #333; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sorting</h2>
+        <p>Enter Numbers Of Array</p>
+        <input type="text" id="arrInput"> <br><br>
+        <button onclick="sortArray()">Sort</button>
+        <div id="result"></div>
+    </div>
+    <script>
+        function sortArray() {
+            let arr = document.getElementById('arrInput').value.split(',').map(Number);
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = 0; j < arr.length - 1 - i; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        let temp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = temp;
+                    }
+                }
+            }
+            document.getElementById('result').innerText = 'Sorted: ' + arr.join(', ');
+        }
+    </script>
+</body>
+</html>
