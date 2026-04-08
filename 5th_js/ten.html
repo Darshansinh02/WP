@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide and Show Text</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding-top: 50px; }
+        #message { font-size: 24px; margin-bottom: 20px; transition: opacity 0.3s; }
+        button { padding: 10px 20px; margin: 5px; cursor: pointer; border-radius: 5px; border: 1px solid #ccc; }
+        .hide-btn { background-color: #dc3545; color: white; border: none; }
+        .show-btn { background-color: #28a745; color: white; border: none; }
+    </style>
+</head>
+<body>
+    <div id="message">Now you see me!</div>    
+    <button class="hide-btn" onclick="document.getElementById('message').style.display='none'">Hide</button>
+    <button class="show-btn" onclick="document.getElementById('message').style.display='block'">Show</button>
+</body>
+</html>
