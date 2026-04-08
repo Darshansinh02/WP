@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>New Window</title>
+    </head>
+    <body>
+    <div id="box">
+        <h1>Display In New Window</h1>
+        <label>Enter Text: </label>
+        <textarea id="text_box"></textarea> <br> <br>
+        <button id="btn" class="btn">New Window</button>
+    </div>
+    <script>
+        let textBox = document.getElementById("text_box");
+        let btn = document.getElementById("btn");
+        btn.onclick = function(){
+            let windowFeature = "top=200,left=500,width=500,height=400,status=yes";
+            let mywindow = window.open("", "My Window", windowFeature);
+            mywindow.document.write(textBox.value);
+        }
+    </script>
+    </body>
+</html>
