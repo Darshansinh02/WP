@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd or Even</title>
+    <style>
+        body { 
+            font-family: sans-serif; 
+            background: #f0f2f5; 
+            padding: 20px; 
+            text-align: center;         }
+        .container { 
+            background: white; 
+            padding: 20px; 
+            border-radius: 8px; 
+            display: inline-block; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);         }
+        input, button { 
+            padding: 8px; 
+            margin: 5px; 
+            border: 1px solid #ccc; 
+            border-radius: 4px;         }
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0;         }
+        input[type=number] {
+            -moz-appearance: textfield;        }
+        button { 
+            background: #28a745; 
+            color: white; 
+            border: none; 
+            cursor: pointer;         }
+        .result { 
+            margin-top: 15px; 
+            font-weight: bold; 
+            font-size: 1.2em;
+            color: #333;         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Check Odd or Even</h2>
+        <input type="number" id="numInput">
+        <button onclick="checkNumber()">Check Number</button>
+        <div class="result" id="resultDisplay"></div>
+    </div>
+<script>
+        function checkNumber() {
+            let num = parseInt(document.getElementById('numInput').value);           
+            let resultDisplay = document.getElementById('resultDisplay');
+            if (isNaN(num)) {
+                resultDisplay.innerText = "Please enter a valid number.";
+                resultDisplay.style.color = "red";
+                return;
+            }
+            if (num % 2 === 0) {
+                resultDisplay.innerText = num + " is an Even number.";
+                resultDisplay.style.color = "black";
+            } else {
+                resultDisplay.innerText = num + " is an Odd number.";
+                resultDisplay.style.color = "black";
+            }
+        }
+    </script>
+</body>
+</html>
