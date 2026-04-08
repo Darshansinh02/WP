@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0
+    <title>Alert Box Example</title>
+</head>
+<body>
+    <p>Enter Text:</p>
+    <input type="text" id="myText"> <br><br>
+    <button onclick="showAlert()">Show</button>
+
+    <script>
+        function showAlert() {
+            let content = document.getElementById('myText').value;
+            alert(content);
+        }
+    </script>
+</body>
+</html>
