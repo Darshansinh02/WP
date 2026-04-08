@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color</title>
+    <style>
+        body { 
+            transition: background-color 0.5s ease; 
+            text-align: center; 
+            padding-top: 100px; 
+            font-family: sans-serif;
+            background-color: #f4f4f9;
+        }
+        button { 
+            padding: 12px 24px; 
+            font-size: 18px; 
+            margin: 10px; 
+            cursor: pointer; 
+            border: 2px solid #333;
+            border-radius: 6px;
+            background: white;
+            font-weight: bold;
+            transition: transform 0.1s;
+        }
+        button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+    <h2>Click a button to change the background!</h2>
+    <button onclick="changeColor('Red')">Red</button>
+    <button onclick="changeColor('Green')">Green</button>
+    <button onclick="changeColor('Blue')">Blue</button>
+    <script>
+        function changeColor(colorName) {
+            document.body.style.backgroundColor = colorName;
+        }
+    </script>
+</body>
+</html>
