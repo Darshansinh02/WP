@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Multiple Windows</title>
+    <style>
+        body { 
+            font-family: sans-serif; 
+            text-align: center; 
+            padding-top: 50px; 
+            background: #f0f2f5;
+        }
+        button { 
+            padding: 12px 24px; 
+            font-size: 16px; 
+            cursor: pointer; 
+            background: #17a2b8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #138496;
+        }
+    </style>
+</head>
+<body>
+    <h2>Open Multiple Windows</h2>
+    <button onclick="openMultipleWindows()">Open Windows</button>
+    <script>
+        function openMultipleWindows() {
+            let win1 = window.open("", "Window1", "width=300,height=300,left=100,top=100");
+            if(win1) win1.document.write("<h2 style='text-align:center;'>I am Window 1</h2>");
+            let win2 = window.open("", "Window2", "width=300,height=300,left=450,top=100");
+            if(win2) win2.document.write("<h2 style='text-align:center;'>I am Window 2</h2>");
+            let win3 = window.open("", "Window3", "width=300,height=300,left=800,top=100");
+            if(win3) win3.document.write("<h2 style='text-align:center;'>I am Window 3</h2>");
+            if (!win1 || !win2 || !win3) {
+                alert("Some windows were blocked! Please allow popups for this page in your browser settings.");
+            }
+        }
+    </script>
+</body>
+</html>
